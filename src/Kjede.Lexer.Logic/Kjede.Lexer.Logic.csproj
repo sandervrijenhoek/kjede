@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Kjede.Lexer.Api\Kjede.Lexer.Api.csproj" />
+    </ItemGroup>
+
 </Project>
