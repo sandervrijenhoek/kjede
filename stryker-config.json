@@ -1,9 +1,9 @@
 {
   "stryker-config": {
     "project-info": {
-      "name": "Kjede",
+      "name": "github.com/sandervrijenhoek/kjede",
       "module": "Kjede.Lexer.Logic",
-      "version": ""
+      "version": "0.1.0"
     },
     "concurrency": 6,
     "mutation-level": "Standard",
