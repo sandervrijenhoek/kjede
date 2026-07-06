@@ -17,4 +17,4 @@ jobs:
           STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD }}
         run: |
           dotnet tool restore
-          dotnet stryker
+          dotnet stryker -v "${{ github.head_ref }}" 

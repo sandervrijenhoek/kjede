@@ -1,7 +1,7 @@
 {
   "stryker-config": {
     "project-info": {
-      "name": "",
+      "name": "Kjede",
       "module": "Kjede.Lexer.Logic",
       "version": ""
     },
