@@ -43,6 +43,7 @@ ScaffoldingReadMe.txt
 ~$*
 *~
 CodeCoverage/
+StrykerOutput/
 
 # MSBuild Binary and Structured Log
 *.binlog
@@ -62,3 +63,6 @@ nunit-*.xml
 
 # macOS
 .DS_Store
+
+# Claude
+CLAUDE.md
