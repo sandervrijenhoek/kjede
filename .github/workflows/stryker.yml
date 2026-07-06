@@ -8,7 +8,10 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
-
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+      - name: Restore .NET tools
+        run: dotnet tool restore
       - name: Run Stryker.NET against Repository
         uses: lyndychivs/dotnet-stryker-action@v1.5
         with:
