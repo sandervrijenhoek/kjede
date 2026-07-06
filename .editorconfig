@@ -5,7 +5,7 @@
 dotnet_diagnostic.IDE0055.severity = none
 
 # Conflicting StyleCop rules with CSharpier
-otnet_diagnostic.SA1000.severity = none
+dotnet_diagnostic.SA1000.severity = none
 dotnet_diagnostic.SA1009.severity = none
 dotnet_diagnostic.SA1111.severity = none
 dotnet_diagnostic.SA1118.severity = none

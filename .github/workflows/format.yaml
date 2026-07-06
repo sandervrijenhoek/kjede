@@ -10,6 +10,8 @@ jobs:
     name: Check Formatting
     steps:
       - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
       - run: |
           dotnet tool restore
           dotnet csharpier check .

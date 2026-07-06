@@ -1,0 +1,11 @@
+name: Run Stryker.NET with Dashboard Reporting
+on: push
+jobs:
+  mutation-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: lyndychivs/dotnet-stryker-action@v1.5
+        with:
+          configurationFile: "stryker-config.json"
+          dashboardApiKey: ${{ secrets.STRYKER_DASHBOARD }}
