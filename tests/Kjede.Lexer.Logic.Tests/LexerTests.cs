@@ -169,7 +169,9 @@ public class LexerTests
 
         Assert.That(
             tokens.Select(t => (t.type, t.value)),
-            Is.EqualTo(new[] { (TokenType.Unknown, "x = while"), (TokenType.EndOfFile, string.Empty) })
+            Is.EqualTo(
+                new[] { (TokenType.Unknown, "x = while"), (TokenType.EndOfFile, string.Empty) }
+            )
         );
     }
 
@@ -349,7 +351,9 @@ public class LexerTests
 
         Assert.That(
             tokens.Select(t => (t.type, t.value)),
-            Is.EqualTo(new[] { (TokenType.Unknown, "x = a\""), (TokenType.EndOfFile, string.Empty) })
+            Is.EqualTo(
+                new[] { (TokenType.Unknown, "x = a\""), (TokenType.EndOfFile, string.Empty) }
+            )
         );
     }
 
@@ -487,7 +491,11 @@ public class LexerTests
         Assert.That(
             tokens.Select(t => (t.type, t.value)),
             Is.EqualTo(
-                new[] { (TokenType.Unknown, "x = \"a\"  \"b\""), (TokenType.EndOfFile, string.Empty) }
+                new[]
+                {
+                    (TokenType.Unknown, "x = \"a\"  \"b\""),
+                    (TokenType.EndOfFile, string.Empty),
+                }
             )
         );
     }
@@ -519,7 +527,9 @@ public class LexerTests
 
         Assert.That(
             tokens.Select(t => (t.type, t.value)),
-            Is.EqualTo(new[] { (TokenType.Unknown, "x = \"a"), (TokenType.EndOfFile, string.Empty) })
+            Is.EqualTo(
+                new[] { (TokenType.Unknown, "x = \"a"), (TokenType.EndOfFile, string.Empty) }
+            )
         );
     }
 
@@ -535,7 +545,9 @@ public class LexerTests
 
         Assert.That(
             tokens.Select(t => (t.type, t.value)),
-            Is.EqualTo(new[] { (TokenType.Unknown, "x = \"a\\b"), (TokenType.EndOfFile, string.Empty) })
+            Is.EqualTo(
+                new[] { (TokenType.Unknown, "x = \"a\\b"), (TokenType.EndOfFile, string.Empty) }
+            )
         );
     }
 
@@ -552,7 +564,9 @@ public class LexerTests
 
         Assert.That(
             tokens.Select(t => (t.type, t.value)),
-            Is.EqualTo(new[] { (TokenType.Unknown, "x = \"a\\"), (TokenType.EndOfFile, string.Empty) })
+            Is.EqualTo(
+                new[] { (TokenType.Unknown, "x = \"a\\"), (TokenType.EndOfFile, string.Empty) }
+            )
         );
     }
 }
