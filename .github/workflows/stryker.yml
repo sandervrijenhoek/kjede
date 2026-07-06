@@ -1,20 +1,16 @@
 name: Run Stryker.NET with Dashboard Reporting
 
-on:
-  pull_request:
-    branches: [ main ]
+on: push
 
 jobs:
   mutation-testing:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/checkout@v6
+
       - name: Run Stryker.NET against Repository
-        env:
-          STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD }}
-        run: |
-          dotnet tool restore
-          dotnet stryker
+        uses: lyndychivs/dotnet-stryker-action@v1.5
+        with:
+          configurationFile: "stryker-config.json"
+          dashboardApiKey: ${{ secrets.STRYKER_DASHBOARD }}
