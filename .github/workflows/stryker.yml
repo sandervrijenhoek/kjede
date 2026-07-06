@@ -10,11 +10,11 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
-      - run: dotnet tool restore
-
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
       - name: Run Stryker.NET against Repository
-        uses: lyndychivs/dotnet-stryker-action@v1.5
-        with:
-          configurationFile: "stryker-config.json"
-          dashboardApiKey: ${{ secrets.STRYKER_DASHBOARD }}
+        env:
+          STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD }}
+        run: |
+          dotnet tool restore
+          dotnet stryker
